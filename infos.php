@@ -13,8 +13,6 @@
         <link href="DataTables/jquery.dataTables.min.css" rel="stylesheet">
         <script src="DataTables/jquery.dataTables.min.js"></script>
 
-
-
         <link rel="stylesheet" href="style.css">
         <title>Infos Client du Patro Ollignies</title>
     </head>
@@ -43,9 +41,8 @@
             var contentHeight = htmlHeight - headerHeight;
 
             $('#content').outerHeight(contentHeight); //Limite la taille du div #content pour qu'il fasse toute la page sans déborder
-
             
-            $('#divInfosCartes').outerHeight($('#divInfosClients').outerHeight(true)); //Je mets la même au 2 div en fonction du premier.
+            $('#divInfosCartes').outerHeight($('#divInfosClients').outerHeight(true)); //Je mets la même hauteur au 2 div en fonction du premier.
 
             });
         </script>
