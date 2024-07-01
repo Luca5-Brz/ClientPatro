@@ -1,9 +1,11 @@
 <div id="header">
+     <div id="divLogo">
      <img src="img/logo.png" alt="Logo Patro" id="logo">
-     <h1>Patro d'Ollignies</h1>
-     <p>Nom Prenom</p>
+     </div>
+     <h1 id="titre">Patro d'Ollignies</h1>
+     <p id="infos">Nom Prenom</p>
      <nav id="navBar">
-          <button>Gestion des cartes</button>
+          <button>Info</button>
           <button>Menu</button>
      </nav>
 </div>

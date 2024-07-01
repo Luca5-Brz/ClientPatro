@@ -99,7 +99,30 @@ body {
   grid-template-rows: 1fr 1fr;
 }
 
-/*******************Content de la page Info Client*******************/
+#header #divLogo {
+  width: max-content;
+}
+
+#header #divLogo #logo {
+  width: 150px;
+}
+
+#header #titre {
+  text-align: center;
+  font-family: Adventure;
+}
+
+#header #infos {
+  text-align: right;
+  padding: 20px;
+}
+
+#header #navBar {
+  grid-column: 1/4;
+  align-self: center;
+}
+
+/*******************Content de la page Infos Client*******************/
 #content {
   width: 100vw;
 
@@ -111,7 +134,6 @@ body {
 
 #divInfosClients {
   width: 53.125rem;
-  height: 50rem;
 
   background-color: #afafaf;
 
