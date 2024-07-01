@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "NatLog";
+  src: url("fonts/natural_log/natlog.ttf");
+}
+
+@font-face {
+  font-family: "Adventure";
+  src: url("fonts/adventure/Adventure.otf");
+}
+
+@font-face {
+  font-family: "Adventure Hollow";
+  src: url("fonts/adventure/Adventure Hollow.otf");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("fonts/poppins/Poppins-Regular.otf");
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Verdana;
+}
+
+/*******************FORM LOGIN*******************/
+#div-body {
+  /* J'ai utilise ce div pour pouvoir centrer plus facilement le formulaire complet*/
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#formDiv {
+  width: 25rem;
+  height: 37.5rem;
+  margin: auto;
+  background-color: rgb(218 218 218);
+  border-radius: 1.5625rem;
+  position: relative; /* Je l'ai mis en "relative" pour pouvoir positionner le "h2-login" comme je veux par rapport aux parent et non a la page. */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.625rem 0.625rem 3.125rem rgb(60 60 60),
+    -0.625rem -0.625rem 3.125rem rgb(60 60 60 / 0%),
+    0.625rem -0.625rem 3.125rem rgb(60 60 60 / 0%),
+    -0.625rem 0.625rem 3.125rem rgb(60 60 60);
+}
+
+#h2-login {
+  /* Titre "Login" */
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 1.875rem;
+}
+
+#form-login {
+  font-size: 1.5rem;
+  position: relative; /* Je l'ai mis en "relative" pour pouvoir positionner les enfants comme je veux par rapport aux parent et non a la page. */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+#div-passwd {
+  margin-top: 1.25rem;
+}
+
+#form-login .form-check {
+  /* "Remember me checkbox" */
+  font-size: 0.8rem;
+  margin-top: 1.875rem;
+}
+
+#form-login .btn-primary {
+  /*bouton de connection*/
+  width: 100%;
+  position: relative;
+  top: 2.5rem;
+}
+
+/*******************HEADER de la page Client*******************/
+#header {
+  padding: 0;
+  margin: 0;
+  min-height: 9.375rem;
+
+  background-color: #afafaf;
+
+  position: relative;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#divLogo {
+  height: fit-content;
+}
+
+#logo {
+  height: 7.5rem;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  margin: 1rem 0;
+}
+
+#header h1 {
+  margin: 0;
+  padding: 0;
+
+  font-family: Adventure;
+  font-size: 3.75rem;
+  color: black;
+}
+
+#divLogin {
+  height: 3.125rem;
+  width: 9.375rem;
+
+  position: absolute;
+  right: 0;
+
+  background-color: rgb(255 0 255);
+}
+
+/*******************Content de la page Info Client*******************/
+#content {
+  width: 100vw;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#divInfosClients {
+  width: 53.125rem;
+  height: 50rem;
+
+  background-color: #afafaf;
+
+  border-radius: 2.5rem;
+}
+
+#divInfosCartes {
+  width: 31.25rem;
+
+  background-color: #afafaf;
+
+  border-radius: 2.5rem;
+}
