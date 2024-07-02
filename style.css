@@ -27,6 +27,7 @@ html {
 
 body {
   font-family: Arial, Verdana;
+  margin: 0;
 }
 
 /*******************FORM LOGIN*******************/
@@ -95,47 +96,108 @@ body {
 
 #header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0px;
+  background-color: #D9D9D9;
+  align-content: center;
+  text-align: center;
 }
 
-#header #divLogo {
-  width: max-content;
+#header a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#header #divLogo{
+  width: 150px;
+  margin: 20px;
+  grid-column: 1/span 2;
 }
 
 #header #divLogo #logo {
   width: 150px;
+  margin: 20px;
 }
 
 #header #titre {
   text-align: center;
   font-family: Adventure;
+  grid-column: 3/span 2;
+  align-self: center;
 }
 
 #header #infos {
   text-align: right;
   padding: 20px;
+  grid-column: 5/span 2;
+  align-self: center;
+  padding: 20px 50px;
+  width: 200px;
+  background-color: #A4C408;
+  border-radius: 10px;
+  justify-self: end;
+  margin-right: 20px;
 }
 
 #header #navBar {
-  grid-column: 1/4;
+  grid-column: 1/7;
   align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#header #navBar a{
+  display: block;
+  background-color: #808080;
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#header #navBar a:hover {
+  background-color: #00FFFF;
+  color: #000000;
+}
+
+#navBar #info {
+  width: 150px;
+  justify-self: right;
+  margin-right: 150px;
+}
+
+#navBar #menu {
+  width: 150px;
+  justify-self: left;
+  margin-left: 150px;
+}
+
+#header #navBar .select {
+  background-color: #A4C408;
+  color: #000000;
 }
 
 /*******************Content de la page Infos Client*******************/
 #content {
-  width: 100vw;
+  width: 100%;
 
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-template-columns: 53.125rem 31.25rem;
   justify-content: space-around;
-  align-items: center;
+
+  padding-top: 60px;
+  padding-bottom: 50px;
 }
 
 #divInfosClients {
   width: 53.125rem;
+  min-height:fit-content;
 
-  background-color: red;
+  background-color: #afafaf;
 
   border-radius: 2.5rem;
 }
@@ -146,4 +208,42 @@ body {
   background-color: #afafaf;
 
   border-radius: 2.5rem;
+}
+
+#Cartes{
+  background-color:#808080 ;
+  height: 60px;
+  border-radius: 2.5rem 2.5rem 0 0;
+
+  display: grid;
+  justify-content:center;
+  align-items: center;
+}
+
+#Cartes p{
+  margin:0;
+  padding:0;
+
+  font-size:2.6rem;
+  Color: white;
+}
+
+#HeaderTab{ 
+  display:flex;
+  height: 40px;
+  border-radius: 0 0 1.25rem 1.25rem;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  justify-content: space-around;
+  align-items:center;
+  
+  background-color:aqua;
+}
+
+#HeaderTab p{
+  width: fit-content;
+  margin:0;
+  
+  background-color:red;
 }

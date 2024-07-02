@@ -1,3 +1,7 @@
+<?php 
+	include '_bd.php' ;
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -19,19 +23,33 @@
 
     <body>
         <?php
-            include ("header.php")
+            include ("_header.php")
         ?>
-
-        <div id="content">
+        <main id="content">
             <div id="divInfosClients">
 
             </div>
 
             <div id="divInfosCartes">
+                <div id="Cartes">
+                    <p>Mes Cartes</p>
+                </div>
+                <div id="HeaderTab">
+                    <p>N°</p>
+                    <p> Date D'activation</p>
+                    <p>Montant</p>
+                    <p>Bloquée</p>
+                </div>
 
             </div>
-        </div>
-
+        </main>
+        <footer>
+            
+        </footer>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="DataTables/jquery.dataTables.min.js"></script>
+        <script src="Bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/bouton.js"></script>
         <script>
             $(document).ready(function(){
 
