@@ -40,6 +40,10 @@ body {
   color: #000000;
 }
 
+.soulignee {
+  text-decoration: underline;
+}
+
 /*******************FORM LOGIN*******************/
 #div-body {
   /* J'ai utilise ce div pour pouvoir centrer plus facilement le formulaire complet*/
@@ -218,9 +222,25 @@ body {
 
 #divInfosClients {
   width: 53.125rem;
-  min-height: fit-content;
+  height: fit-content;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
 
   border-radius: 2.5rem;
+  padding: 50px 0 50px 0;
+}
+
+.divClient {
+  margin: 25px 0 25px 0;
+  font-size: 1.5rem;
+}
+
+.divClient input {
+  font-size: 1.5rem;
+  margin-left: 25px;
 }
 
 #divInfosCartes {
@@ -256,14 +276,12 @@ body {
   justify-content: space-around;
   align-items: center;
 
-  background-color: aqua;
+  background-color: #afafaf;
 }
 
 #HeaderTab p {
   width: fit-content;
   margin: 0;
-
-  background-color: red;
 }
 
 /*******************Content de la page Menu Client*******************/

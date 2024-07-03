@@ -12,6 +12,8 @@
                     $Prenom=$_SESSION["prenom"];
                     $Nom=$_SESSION["nom"];
                     echo $Prenom.' '.$Nom;
+               }else {
+                    header('Location: index.php');
                }
           ?>
      </a>

@@ -55,14 +55,17 @@
                                         $prenom=$row["prenom"];
                                         $nom=$row["nom"];
                                         $access=$row["access"];
+                                        $id_compte=$row["id_compte"];
                                     }
 
                                     if($password == $password_db){
-                                        include("sessions.php");
+                                        include("session.php");
                                         $_SESSION["IsAllowed"]=true;
                                         $_SESSION["prenom"]=$prenom;
                                         $_SESSION["nom"]=$nom;
                                         $_SESSION["access"]=$access;
+                                        $_SESSION["mail"]=$email_db;
+                                        $_SESSION["id_compte"]=$id_compte;
                                         header('Location: infos.php');                                        
                                     }
                                     else {

@@ -17,6 +17,22 @@
         ?>
         <main id="content">
             <div id="divInfosClients" class="claire">
+                <div class="divClient" id="prenom">
+                    <label for="Prenom" class="soulignee">Prenom :</label>
+                    <input type="text" readonly value=<?php echo$_SESSION["prenom"] ?>>
+                </div>
+
+                <div class="divClient" id="nom">
+                <label for="Nom" class="soulignee">Nom :</label>
+                <input type="text" readonly value=<?php echo$_SESSION["nom"] ?>>
+                </div>
+
+                <div class="divClient" id=mail">
+                <label for="Mail" class="soulignee">Email :</label>
+                <input type="text" readonly value=<?php echo$_SESSION["mail"] ?>>
+                </div>
+
+                <div class="divClient" id="modifMdp" style="Display:none">Changer mes Informations</div>
 
             </div>
 
