@@ -30,6 +30,16 @@ body {
   margin: 0;
 }
 
+.foncee {
+  background-color: #808080;
+  color: #ffffff;
+}
+
+.claire {
+  background-color: #D9D9D9;
+  color: #000000;
+}
+
 /*******************FORM LOGIN*******************/
 #div-body {
   /* J'ai utilise ce div pour pouvoir centrer plus facilement le formulaire complet*/
@@ -266,6 +276,7 @@ body {
 #main_menu #type {
   display: grid;
   margin: 0 5px;
+  border-radius: 10px;
 }
 
 #main_menu #type p {
@@ -279,6 +290,7 @@ body {
   padding: 10px;
   row-gap: 20px;
   justify-items: center;
+  border-radius: 0 0 10px 10px;
 }
 
 #main_menu #bouttons p {
@@ -287,15 +299,15 @@ body {
 }
 
 #main_menu #bouttons div {
-  width: 60%;
+  width: 65%;
+  border-radius: 10px;
 }
 
-#main_menu .foncee {
-  background-color: #808080;
-  color: #ffffff;
+#main_menu #items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-#main_menu .claire {
-  background-color: #D9D9D9;
-  color: #000000;
+#main_menu #items .item{
+  border-radius: 10px;
 }

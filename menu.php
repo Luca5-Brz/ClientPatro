@@ -30,8 +30,13 @@
                 </div>
             </div>
             <div id="items">
-                <div class="item">
-                    <p>Coca 1.50</p>
+                <div class="item claire">
+                    <p>Coca </p>
+                    <p>1.50</>
+                </div>
+                <div class="item claire">
+                    <p>Biére </p>
+                    <p>3.00</>
                 </div>
             </div>
             <div id="total">
