@@ -2,9 +2,9 @@
 
 date_default_timezone_set('Europe/Brussels');
 $hote='localhost';
-$nomBD='Projet Patro';
+$nomBD='projet_patro';
 $user='root';
-$mdp=''; 
+$mdp='x+43gDV7^.Ky'; 
 
 try {
  $bd=new PDO('mysql:host='.$hote.';dbname='.$nomBD, $user, $mdp);
