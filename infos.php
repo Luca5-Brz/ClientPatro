@@ -16,12 +16,12 @@
             include ("_header.php")
         ?>
         <main id="content">
-            <div id="divInfosClients">
+            <div id="divInfosClients" class="claire">
 
             </div>
 
-            <div id="divInfosCartes">
-                <div id="Cartes">
+            <div id="divInfosCartes" class="claire">
+                <div id="Cartes" class="foncee">
                     <p>Mes Cartes</p>
                 </div>
                 <div id="HeaderTab">
