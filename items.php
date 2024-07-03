@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Exécuter une requête SQL
         $result=$bd->prepare('SELECT produit.nom_produit, prix.prix FROM produit
                               JOIN prix on prix.id_prix = produit.id_prix
-                              WHERE type= :type ;');
+                              WHERE type= :type AND actif=1 ;');
         $result->bindValue(':type', $_POST['type']);
         $result->execute();
         
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Exécuter une requête SQL
         $result=$bd->prepare('SELECT produit.nom_produit, prix.prix FROM produit
                               JOIN prix on prix.id_prix = produit.id_prix
-                              WHERE type= :type ;');
+                              WHERE type= :type AND actif=1 ;');
         $result->bindValue(':type', $_POST['type']);
         $result->execute();
         
@@ -27,14 +27,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Exécuter une requête SQL
         $result=$bd->prepare('SELECT produit.nom_produit, prix.prix FROM produit
                               JOIN prix on prix.id_prix = produit.id_prix
-                              WHERE type= :type ;');
+                              WHERE type= :type AND actif=1 ;');
         $result->bindValue(':type', $_POST['type']);
         $result->execute();
 
     }
 
     while($data = $result->fetch()) {
-        echo '<p>', $data['nom_produit'],'  ',$data['prix'],'</p>';
+        echo   '<div class="item claire">
+                    <p class="nom">', $data['nom_produit'],' </p>
+                    <p class="prix">',$data['prix']*1,' €</p>
+                </div>';
     }
 }
 ?>
