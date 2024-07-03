@@ -30,16 +30,6 @@
                     <p>Montant</p>
                     <p>Bloquée</p>
                 </div>
-
-            <div id="Cartes">
-                    <p>Mes Cartes</p>
-                </div>
-                <div id="HeaderTab">
-                    <p>N°</p>
-                    <p>Date D'activation</p>
-                    <p>Montant</p>
-                    <p>Bloquée</p>
-                </div>
             </div>
         </main>
         <footer>

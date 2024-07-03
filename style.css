@@ -191,16 +191,10 @@ body {
 /*******************Content de la page Infos Client*******************/
 #content {
   width: 100%;
-  width: 100%;
 
-  display: grid;
-  grid-template-columns: 53.125rem 31.25rem;
   display: grid;
   grid-template-columns: 53.125rem 31.25rem;
   justify-content: space-around;
-
-  padding-top: 60px;
-  padding-bottom: 50px;
 
   padding-top: 60px;
   padding-bottom: 50px;
@@ -209,9 +203,7 @@ body {
 #divInfosClients {
   width: 53.125rem;
   min-height:fit-content;
-  min-height:fit-content;
 
-  background-color: #afafaf;
   background-color: #afafaf;
 
   border-radius: 2.5rem;

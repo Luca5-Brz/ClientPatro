@@ -29,8 +29,10 @@
                     </div>
                 </div>
             </div>
-            <div id="item">
-                
+            <div id="items">
+                <div class="item">
+                    <p>Coca 1.50</p>
+                </div>
             </div>
             <div id="total">
                 
@@ -47,7 +49,33 @@
 
             $(document).ready(function() {
 
-                $("")
+                $("#bouttons div").on("click", function() {
+                    var type;
+                    if ($(this).attr('id') == "boutton_boissons") {
+                        type = 0;
+                    }else if ($(this).attr('id') == "boutton_bouffe") {
+                        type = 1;
+                    }if ($(this).attr('id') == "boutton_grand") {
+                        type = 2;
+                    }
+
+                    // Créer une requête AJAX
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('POST', 'items.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+                    // Définir ce qui se passe lorsque la requête est terminée
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            $("#items").html(xhr.responseText)
+                        }
+                    };
+
+                    // Envoyer les données au serveur
+
+                    xhr.send("type="+type);
+
+                });
 
             });
 
