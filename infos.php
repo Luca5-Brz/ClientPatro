@@ -7,16 +7,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Latest compiled and minified CSS -->
-        <link href="Bootstrap/bootstrap.min.css" rel="stylesheet">
-        <script src="Bootstrap/bootstrap.bundle.min.js"></script>
-
-        <script src="js/jquery-3.6.0.min.js"></script>
-
-        <link href="DataTables/jquery.dataTables.min.css" rel="stylesheet">
-        <script src="DataTables/jquery.dataTables.min.js"></script>
-
         <link rel="stylesheet" href="style.css">
         <title>Infos Client du Patro Ollignies</title>
     </head>
@@ -31,7 +21,15 @@
             </div>
 
             <div id="divInfosCartes">
-
+            <div id="Cartes">
+                    <p>Mes Cartes</p>
+                </div>
+                <div id="HeaderTab">
+                    <p>N°</p>
+                    <p>Date D'activation</p>
+                    <p>Montant</p>
+                    <p>Bloquée</p>
+                </div>
             </div>
         </main>
         <footer>

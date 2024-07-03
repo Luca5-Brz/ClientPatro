@@ -7,12 +7,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Latest compiled and minified CSS -->
-        <link href="Bootstrap/bootstrap.min.css" rel="stylesheet">
-
-
-        <link href="DataTables/jquery.dataTables.min.css" rel="stylesheet">
-
         <link rel="stylesheet" href="style.css">
         <title>Menu</title>
     </head>
@@ -20,8 +14,27 @@
         <?php
             include ("_header.php")
         ?>
-        <main>
-
+        <main id="main_menu">
+            <div id="type" class="foncee">
+                <p>Types</p>
+                <div id="bouttons" class="claire">
+                    <div id="boutton_boissons" class="foncee">
+                        <p>Boissons</p>
+                    </div>
+                    <div id="boutton_bouffe" class="foncee">
+                        <p>Bouffes</p>
+                    </div>
+                    <div id="boutton_grand" class="foncee">
+                        <p>Grands</p>
+                    </div>
+                </div>
+            </div>
+            <div id="item">
+                
+            </div>
+            <div id="total">
+                
+            </div>
         </main>
         <footer>
             
@@ -30,5 +43,14 @@
         <script src="DataTables/jquery.dataTables.min.js"></script>
         <script src="Bootstrap/bootstrap.bundle.min.js"></script>
         <script src="js/bouton.js"></script>
+        <script>
+
+            $(document).ready(function() {
+
+                $("")
+
+            });
+
+        </script>
     </body>
 </html>
