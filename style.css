@@ -275,8 +275,10 @@ body {
 
 #main_menu #type {
   display: grid;
-  margin: 0 5px;
+  grid-template-rows: 1fr 7fr ;
+  margin: 0 10px;
   border-radius: 10px;
+  height: 700px;
 }
 
 #main_menu #type p {
@@ -286,28 +288,97 @@ body {
 
 #main_menu #bouttons {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
   padding: 10px;
   row-gap: 20px;
   justify-items: center;
+  align-items: center;
   border-radius: 0 0 10px 10px;
-}
-
-#main_menu #bouttons p {
-  font-size: 1.75rem;
-  text-align: center;
 }
 
 #main_menu #bouttons div {
   width: 65%;
   border-radius: 10px;
+  height: 120px;
+  padding: 10px;
+  display: grid;
+}
+
+#main_menu #bouttons div img {
+  width: 75px;
+  height: 75px;
+  justify-self: center;
+}
+
+#main_menu #bouttons div p {
+  margin: 0;
+  font-size: 1.75rem;
+  text-align: center;
 }
 
 #main_menu #items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+  padding: 20px;
 }
 
 #main_menu #items .item{
+  display: grid;
+  border-radius: 10px;
+  height: 150px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+#main_menu #items .item .nom{
+  font-size: 1.5rem;
+}
+
+#main_menu #total {
+  margin: 0 10px;
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  height: 700px;
+}
+
+#main_menu #total p {
+  font-size: 2rem;
+  text-align: right;
+  margin: 0;
+  padding: 32px 20px;
+}
+
+#main_menu #total #produits .titre {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 0.5rem;
+}
+
+#main_menu #total #produits .titre p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#main_menu #total #produits .produit {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 0.5rem;
+}
+
+#main_menu #total #produits .produit p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#main_menu #total button {
+  width: 125px;
+  height: 50px;
+  justify-self: end;
+  align-self: center;
+  margin: 5px;
+  border: 0;
   border-radius: 10px;
 }

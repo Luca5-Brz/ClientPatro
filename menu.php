@@ -19,28 +19,46 @@
                 <p>Types</p>
                 <div id="bouttons" class="claire">
                     <div id="boutton_boissons" class="foncee">
+                        <img src="img/boissons.png" alt="">
                         <p>Boissons</p>
                     </div>
                     <div id="boutton_bouffe" class="foncee">
+                    <img src="img/bouffe.png" alt="">
                         <p>Bouffes</p>
                     </div>
                     <div id="boutton_grand" class="foncee">
+                    <img src="img/grand.png" alt="">
                         <p>Grands</p>
                     </div>
                 </div>
             </div>
             <div id="items">
-                <div class="item claire">
-                    <p>Coca </p>
-                    <p>1.50</>
-                </div>
-                <div class="item claire">
-                    <p>Biére </p>
-                    <p>3.00</>
-                </div>
-            </div>
-            <div id="total">
+                <?php 
                 
+                $result=$bd->query('SELECT produit.nom_produit, prix.prix FROM produit
+                                    JOIN prix on prix.id_prix = produit.id_prix
+                                    WHERE type=0 AND actif=1 ;');
+                $result->execute();
+
+                while($data = $result->fetch()) {
+                    echo   '<div class="item claire">
+                                <p class="nom">', $data['nom_produit'],' </p>
+                                <p class="prix">',$data['prix']*1,' €</p>
+                            </div>';
+                }
+
+                ?>
+            </div>
+            <div id="total" class="claire">
+                <p class="foncee">Total €</p>
+                <div id="produits" class="claire">
+                    <div class="titre">
+                        <p class="quantite">quantité</p>
+                        <p class="nom">nom</p>
+                        <p class="prix">prix</p>
+                    </div>
+                </div>
+                <button class="foncee">Recommencer<img src="" alt=""></button>
             </div>
         </main>
         <footer>
@@ -80,6 +98,42 @@
 
                     xhr.send("type="+type);
 
+                });
+
+                $("#items").on("click", ".item", function() {
+
+                    var item = $(this);
+                    var objet;
+                    var total = 0;
+
+                    $("#produits .produit").each(function() {
+                        if ($(this).find('.nom').text() == item.find('.nom').text()) {
+                            objet =$(this);
+                        }
+                    });
+
+                    if (typeof objet !== 'undefined') {
+                        if (objet.find('.nom').text() == item.find('.nom').text()) {
+                            objet.find('.quantite').text(parseInt(objet.find('.quantite').text()) + 1);
+                            objet.find('.prix').text((parseFloat(item.find('.prix').text())*parseInt(objet.find('.quantite').text())+" €"));
+                        }else {
+                            $("#produits").append('<div class="produit"><p class="quantite">1</p><p class="nom">'+item.find('.nom').text()+'</p><p class="prix">'+item.find('.prix').text()+'</p></div>');
+                        }
+                    }else {
+                        $("#produits").append('<div class="produit"><p class="quantite">1</p><p class="nom">'+item.find('.nom').text()+'</p><p class="prix">'+item.find('.prix').text()+'</p></div>');
+                    }
+
+                    $("#produits .produit").each(function() {
+                        total += parseFloat($(this).find('.prix').text());
+                    });
+
+                    $("#total>p").text(total+" €");
+
+                });
+
+                $("#total button").on("click", function() {
+                    $("#produits").html('<div class="titre"><p class="quantite">quantité</p><p class="nom">nom</p><p class="prix">prix</p></div>');
+                    $("#total>p").text("Total €");
                 });
 
             });
