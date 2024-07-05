@@ -40,12 +40,33 @@
                 <div id="Cartes" class="foncee">
                     <p>Mes Cartes</p>
                 </div>
-                <div id="HeaderTab">
+                <div id="HeaderTab" class="tiede">
                     <p>N°</p>
-                    <p> Date D'activation</p>
+                    <p>Date D'activation</p>
                     <p>Montant</p>
                     <p>Bloquée</p>
                 </div>
+                <?php 
+                    $result=$bd->query('SELECT carte.num_serie, carte.montant, carte.verrouiller FROM carte
+                                        JOIN compte on carte.id_compte = compte.id_compte
+                                        WHERE compte.id_compte = 1;');
+                    $result->execute();
+
+                    while($data = $result->fetch()) {
+
+                        if($data['verrouiller']== '0') {
+                            $bool = 'NON';
+                        }else {
+                            $bool = 'OUI';
+                        }
+                        echo   '<div class="carte tiede">
+                                    <p>',$data["num_serie"],'</p>
+                                    <p>01/01/2024</p>
+                                    <p>',$data["montant"],'</p>
+                                    <p>',$bool,'</p>
+                                </div>';
+                    }
+                ?>
             </div>
         </main>
         <footer>

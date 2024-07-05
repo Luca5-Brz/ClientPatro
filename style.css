@@ -44,6 +44,11 @@ body {
   text-decoration: underline;
 }
 
+.tiede {
+  background-color: #afafaf;
+  color: #000000;
+}
+
 /*******************FORM LOGIN*******************/
 #div-body {
   /* J'ai utilise ce div pour pouvoir centrer plus facilement le formulaire complet*/
@@ -267,20 +272,36 @@ body {
 }
 
 #HeaderTab {
-  display: flex;
+  display: grid;
   height: 40px;
   border-radius: 0 0 1.25rem 1.25rem;
 
   grid-template-columns: repeat(4, 1fr);
 
-  justify-content: space-around;
   align-items: center;
-
-  background-color: #afafaf;
 }
 
 #HeaderTab p {
   width: fit-content;
+  justify-self: center;
+  margin: 0;
+}
+
+.carte {
+  display: grid;
+  height: 40px;
+  border-radius: 1.25rem;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  align-items: center;
+
+  margin-top: 5px;
+}
+
+.carte p {
+  width: fit-content;
+  justify-self: center;
   margin: 0;
 }
 

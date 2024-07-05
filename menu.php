@@ -18,15 +18,15 @@
             <div id="type" class="foncee">
                 <p>Types</p>
                 <div id="bouttons" class="claire">
-                    <div id="boutton_boissons" class="foncee">
+                    <div id="boutton_boissons" class="tiede">
                         <img src="img/boissons.png" alt="">
                         <p>Boissons</p>
                     </div>
-                    <div id="boutton_bouffe" class="foncee">
+                    <div id="boutton_bouffe" class="tiede">
                     <img src="img/bouffe.png" alt="">
                         <p>Bouffes</p>
                     </div>
-                    <div id="boutton_grand" class="foncee">
+                    <div id="boutton_grand" class="tiede">
                     <img src="img/grand.png" alt="">
                         <p>Grands</p>
                     </div>
@@ -58,7 +58,7 @@
                         <p class="prix">prix</p>
                     </div>
                 </div>
-                <button class="foncee">Recommencer<img src="" alt=""></button>
+                <button class="tiede">Recommencer<img src="" alt=""></button>
             </div>
         </main>
         <footer>
