@@ -1,9 +1,4 @@
-let page = window.location.pathname.split("/").pop();
+let page = window.location.pathname.split("/").pop().split(".").slice(0, -1)[0];
 
-if (page == "menu.php") {
-    $("#menu").addClass("select");
-    $("#info").removeClass("select");
-}else if (page == "infos.php") {
-    $("#menu").removeClass("select");
-    $("#info").addClass("select");
-}
+$("#navbar a").removeClass("select");
+$("#"+page).addClass("select");
