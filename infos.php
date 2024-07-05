@@ -27,7 +27,7 @@
                 <input type="text" readonly value=<?php echo$_SESSION["nom"] ?>>
                 </div>
 
-                <div class="divClient" id=mail">
+                <div class="divClient" id="mail">
                 <label for="Mail" class="soulignee">Email :</label>
                 <input type="text" readonly value=<?php echo$_SESSION["mail"] ?>>
                 </div>
