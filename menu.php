@@ -52,7 +52,7 @@
             <div id="total" class="claire">
                 <p class="foncee">Total €</p>
                 <div id="produits" class="claire">
-                    <div class="titre">
+                    <div class="titre tiede">
                         <p class="quantite">quantité</p>
                         <p class="nom">nom</p>
                         <p class="prix">prix</p>
@@ -117,10 +117,10 @@
                             objet.find('.quantite').text(parseInt(objet.find('.quantite').text()) + 1);
                             objet.find('.prix').text((parseFloat(item.find('.prix').text())*parseInt(objet.find('.quantite').text())+" €"));
                         }else {
-                            $("#produits").append('<div class="produit"><p class="quantite">1</p><p class="nom">'+item.find('.nom').text()+'</p><p class="prix">'+item.find('.prix').text()+'</p></div>');
+                            $("#produits").append('<div class="produit tiede"><p class="quantite">1</p><p class="nom">'+item.find('.nom').text()+'</p><p class="prix">'+item.find('.prix').text()+'</p></div>');
                         }
                     }else {
-                        $("#produits").append('<div class="produit"><p class="quantite">1</p><p class="nom">'+item.find('.nom').text()+'</p><p class="prix">'+item.find('.prix').text()+'</p></div>');
+                        $("#produits").append('<div class="produit tiede"><p class="quantite">1</p><p class="nom">'+item.find('.nom').text()+'</p><p class="prix">'+item.find('.prix').text()+'</p></div>');
                     }
 
                     $("#produits .produit").each(function() {
@@ -132,7 +132,7 @@
                 });
 
                 $("#total button").on("click", function() {
-                    $("#produits").html('<div class="titre"><p class="quantite">quantité</p><p class="nom">nom</p><p class="prix">prix</p></div>');
+                    $("#produits").html('<div class="titre tiede"><p class="quantite">quantité</p><p class="nom">nom</p><p class="prix">prix</p></div>');
                     $("#total>p").text("Total €");
                 });
 
