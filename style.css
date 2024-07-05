@@ -44,6 +44,11 @@ body {
   text-decoration: underline;
 }
 
+.tiede {
+  background-color: #afafaf;
+  color: #000000;
+}
+
 /*******************FORM LOGIN*******************/
 #div-body {
   /* J'ai utilise ce div pour pouvoir centrer plus facilement le formulaire complet*/
@@ -221,21 +226,25 @@ body {
 }
 
 #divInfosClients {
-  width: 53.125rem;
-  height: fit-content;
-
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
+  display: grid;
+  justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  height: 400px;
+}
 
-  border-radius: 2.5rem;
-  padding: 50px 0 50px 0;
+#prenom {
+  align-self: end;
+}
+
+#mail {
+  align-self: baseline;
 }
 
 .divClient {
   margin: 25px 0 25px 0;
   font-size: 1.5rem;
+  text-align: end;
 }
 
 .divClient input {
@@ -267,20 +276,36 @@ body {
 }
 
 #HeaderTab {
-  display: flex;
+  display: grid;
   height: 40px;
   border-radius: 0 0 1.25rem 1.25rem;
 
   grid-template-columns: repeat(4, 1fr);
 
-  justify-content: space-around;
   align-items: center;
-
-  background-color: #afafaf;
 }
 
 #HeaderTab p {
   width: fit-content;
+  justify-self: center;
+  margin: 0;
+}
+
+.carte {
+  display: grid;
+  height: 40px;
+  border-radius: 1.25rem;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  align-items: center;
+
+  margin-top: 5px;
+}
+
+.carte p {
+  width: fit-content;
+  justify-self: center;
   margin: 0;
 }
 
@@ -361,6 +386,7 @@ body {
   display: grid;
   grid-template-rows: 1fr 6fr 1fr;
   height: 700px;
+  border-radius: 10px;
 }
 
 #main_menu #total p {
@@ -368,6 +394,7 @@ body {
   text-align: right;
   margin: 0;
   padding: 32px 20px;
+  border-radius: 10px 10px 0 0;
 }
 
 #main_menu #total #produits .titre {
