@@ -156,7 +156,7 @@ body {
   line-height: 1.2;
 }
 
-#header #infos {
+#header #utilisateur {
   text-align: right;
   padding: 20px;
   grid-column: 5 / span 2;
@@ -196,7 +196,7 @@ body {
   color: #000000;
 }
 
-#navBar #info {
+#navBar #infos {
   width: 150px;
   justify-self: right;
   margin-right: 150px;

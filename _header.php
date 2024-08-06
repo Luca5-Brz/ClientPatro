@@ -3,7 +3,7 @@
      <a href="infos.php"><img src="img/logo.png" alt="Logo Patro" id="logo"></a>
      </div>
      <h1 id="titre"><a href="infos.php">Patro d'Ollignies</a></h1>
-     <a href="session_stop.php" id="infos">
+     <a href="session_stop.php" id="utilisateur">
           <?php
                include("session.php");
 
@@ -18,7 +18,7 @@
           ?>
      </a>
      <nav id="navBar">
-          <a id="info" href="infos.php">Infos cartes</a>
+          <a id="infos" href="infos.php">Infos cartes</a>
           <a id="menu" href="menu.php">Menu</a>
      </nav>
 </header>
