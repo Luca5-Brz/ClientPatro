@@ -3,7 +3,7 @@
      <a href="infos.php"><img src="img/logo.png" alt="Logo Patro" id="logo"></a>
      </div>
      <h1 id="titre"><a href="infos.php">Patro d'Ollignies</a></h1>
-     <a href="session_stop.php" id="info">
+     <a href="session_stop.php" id="utilisateur">
           <?php
                include("session.php");
 
